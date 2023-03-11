@@ -28,7 +28,7 @@ export default function Home() {
       <button onClick={(e) => submit()}>send</button>
       {array.map((element, index) => {
         return (
-          <div>
+          <div key={index}>
             {index}번째 질문 : {prompt}
             <br />
             {index}번째 답 : {element.result as any}
