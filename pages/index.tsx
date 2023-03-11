@@ -13,7 +13,7 @@ export default function Home() {
   const submit = async () => {
     const gptResult = await axios.post("api/hello", { prompt });
 
-    setArray([...array, { prompt, result: gptResult.data.result }]);
+    setArray([...array, { prompt, result: gptResult.data.result }] as any);
   };
   return (
     <>
